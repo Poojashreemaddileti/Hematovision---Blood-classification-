@@ -280,38 +280,23 @@ with left:
 with right:
 
     st.markdown("""
-    <div class="card">
-        <div class="section-title">What HematoVision Detects</div>
-        <div class="section-text">
-            The model classifies microscopic white blood-cell
-            images into four categories.
-        </div>
-        <br>
-        <b>01 — Eosinophil</b><br>
-        <span class="section-text">
-        White blood cells commonly associated with immune responses.
-        </span>
-        <br><br>
-
-        <b>02 — Lymphocyte</b><br>
-        <span class="section-text">
-        Important immune-system cells involved in adaptive immunity.
-        </span>
-        <br><br>
-
-        <b>03 — Monocyte</b><br>
-        <span class="section-text">
-        Large white blood cells involved in immune defense.
-        </span>
-        <br><br>
-
-        <b>04 — Neutrophil</b><br>
-        <span class="section-text">
-        Abundant white blood cells that play a key role in
-        the body's immune response.
-        </span>
-    </div>
-    """, unsafe_allow_html=True)
+<div class="card">
+<div class="section-title">What HematoVision Detects</div>
+<div class="section-text">The model classifies microscopic white blood-cell images into four categories.</div>
+<br>
+<b>01 — Eosinophil</b><br>
+<span class="section-text">White blood cells commonly associated with immune responses.</span>
+<br><br>
+<b>02 — Lymphocyte</b><br>
+<span class="section-text">Important immune-system cells involved in adaptive immunity.</span>
+<br><br>
+<b>03 — Monocyte</b><br>
+<span class="section-text">Large white blood cells involved in immune defense.</span>
+<br><br>
+<b>04 — Neutrophil</b><br>
+<span class="section-text">Abundant white blood cells that play a key role in the body's immune response.</span>
+</div>
+""", unsafe_allow_html=True)
 
 
 # ---------------- FOOTER ----------------

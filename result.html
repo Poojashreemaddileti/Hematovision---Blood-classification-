@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analysis — HematoVision</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="nav container">
+  <a class="logo" href="{{ url_for('home') }}"><span class="logo-mark">HV</span>HematoVision</a>
+  <nav class="nav-links">
+    <a href="{{ url_for('home') }}">Analyze</a>
+    <a href="{{ url_for('project_overview') }}">About</a>
+  </nav>
+  <a class="nav-cta" href="{{ url_for('home') }}">New analysis ↗</a>
+</header>
+
+<main class="page container">
+  <div class="eyebrow">Analysis complete</div>
+  <h1 class="page-title">Your result.</h1>
+  <p class="page-copy">The uploaded image has been classified by the HematoVision model. The image is used only for this analysis and is not saved.</p>
+
+  <div class="result-grid">
+    <div>
+      <img class="result-image" src="{{ image_data_url }}" alt="Uploaded blood cell image">
+    </div>
+
+    <div class="result-panel">
+      <div>
+        <div class="eyebrow">Predicted blood cell</div>
+        <div class="result-class">{{ predicted_class|capitalize }}</div>
+        <span class="badge">AI classification</span>
+      </div>
+
+      <div>
+        <div class="eyebrow">Confidence</div>
+        <div class="confidence">{{ "%.2f"|format(confidence) }}<small>%</small></div>
+        <p style="color:#aab0ba">Original file: {{ original_filename }}</p>
+        <a class="button" href="{{ url_for('home') }}">Analyze another image →</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer container">
+  <strong>HematoVision</strong>
+  <span>AI-assisted blood-cell classification</span>
+</footer>
+</body>
+</html>
